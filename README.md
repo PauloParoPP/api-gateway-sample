@@ -9,6 +9,8 @@ mvn package spring-boot:repackage
 docker build --build-arg JAR_FILE=target/*.jar -t cpqd/mock/react-api .
 ```
 
+<img src="swagger_api.png">
+
 ## Start/Stop do Kong + API-Sample (com regras definidas no /config)
 
 ```bash
@@ -18,13 +20,19 @@ docker compose stop
 ```
 
 ## URL API
+
+API-Sample:
 ```bash
-API-Sample: http://localhost:8084
+http://localhost:8084
 ```
 
+Kong:
 ```bash
-Kong: http://localhost:8000
+http://localhost:8000
 ```
+
+
+
 
 ## Kong Gateway
 
