@@ -1,0 +1,6 @@
+com/github/swagger/user/model/User.class
+com/github/swagger/product/controller/ProductController.class
+com/github/swagger/product/controller/SwaggerRedirectController.class
+com/github/swagger/product/model/Product.class
+com/github/swagger/user/controller/UserController.class
+com/github/swagger/ApiServiceApplication.class

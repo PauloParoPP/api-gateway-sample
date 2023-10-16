@@ -1,0 +1,45 @@
+_format_version: "1.1"
+services:
+- connect_timeout: 60000
+  host: my-api
+  name: service_products
+  path: /api/products
+  port: 8084
+  protocol: http
+  routes:
+  - name: route_products
+    methods:
+    - GET
+    - POST
+    - PUT
+    paths:
+    - /api/products
+    protocols:
+    - http
+    - https
+    strip_path: true
+- connect_timeout: 60000
+  host: my-api
+  name: service_users
+  path: /api/users
+  port: 8084
+  protocol: http
+  routes:
+  - name: route_post_users
+    methods:
+    - POST
+    paths:
+    - /api/users
+    protocols:
+    - http
+    - https
+    strip_path: true
+plugins:
+- name: rate-limiting
+  route: route_post_users
+  config: 
+    limit_by: ip
+    minute: 5
+    policy: local
+    fault_tolerant: true
+    hide_client_headers: false
