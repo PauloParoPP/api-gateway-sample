@@ -19,15 +19,11 @@ docker compose stop
 
 ## URL API-Sample
 
-```bash
 http://localhost:8084
-```
 <img src="swagger_api.png">
 
 ## URL Kong
-```bash
 http://localhost:8000
-```
 
 
 ## Kong Gateway
