@@ -1,7 +1,0 @@
-/l/disk0/pparo/git/api-gateway-sample/api-service/src/main/java/com/github/swagger/ApiServiceApplication.java
-/l/disk0/pparo/git/api-gateway-sample/api-service/src/main/java/com/github/swagger/user/controller/UserController.java
-/l/disk0/pparo/git/api-gateway-sample/api-service/src/main/java/com/github/swagger/product/config/SwaggerConfig.java
-/l/disk0/pparo/git/api-gateway-sample/api-service/src/main/java/com/github/swagger/product/model/Product.java
-/l/disk0/pparo/git/api-gateway-sample/api-service/src/main/java/com/github/swagger/user/model/User.java
-/l/disk0/pparo/git/api-gateway-sample/api-service/src/main/java/com/github/swagger/product/controller/SwaggerRedirectController.java
-/l/disk0/pparo/git/api-gateway-sample/api-service/src/main/java/com/github/swagger/product/controller/ProductController.java
