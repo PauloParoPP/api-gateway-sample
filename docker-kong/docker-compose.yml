@@ -13,6 +13,7 @@ x-konga-config: &konga-env
   KONGA_DB_PASSWORD: kongapassword
   KONGA_DB_HOST: db
   KONGA_DB_PORT: 5432
+  KONGA_TOKEN_SECRET: km1GUr4RkcQDOuYt4JPNXrCuZwcKmqjb
 
 volumes:
   kong_data: {}
@@ -143,11 +144,20 @@ services:
     - kong-net
 
   my-api:
-    image: cpqd/mock/react-api:latest
+    image: cpqd/mock/app-api:latest
     networks:
       - kong-net
     ports:
       - "8084:8084"
+    security_opt:
+      - no-new-privileges
+
+  my-front:
+    image: cpqd/mock/app-front:latest
+    networks:
+      - kong-net
+    ports:
+      - "8085:80"
     security_opt:
       - no-new-privileges
 

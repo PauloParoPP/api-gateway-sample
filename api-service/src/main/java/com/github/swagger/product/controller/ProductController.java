@@ -24,7 +24,7 @@ public class ProductController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Product getProduct(@PathVariable String id) {
 
-	return new Product(id, "swagger-product");
+	return new Product(id, "swagger-product " + id);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)

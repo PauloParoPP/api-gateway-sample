@@ -1,0 +1,32 @@
+<html>
+<body>
+
+    <script>
+    async function callProductAPI() {
+        var code = document.forms[0].codigo.value;
+        const response = await fetch('http://localhost:8000/api/products/'+code, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+            },
+        })
+
+        const data = await response.json();
+        document.getElementById("result").innerHTML = "<b>Nome do produto</b>:&nbsp;" + data.name; 
+    }
+    </script>
+
+    <form>
+
+        <b>Codigo do Produto:&nbsp;</b><input type="text" name="codigo">
+        &nbsp;<button type="button" onclick="javascript:callProductAPI()">Buscar</button>
+       
+        <br>
+        <div id="result"></div>
+    </form>
+
+
+
+</body>
+</html> 
+

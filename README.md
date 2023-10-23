@@ -8,7 +8,14 @@ https://github.com/Kong/docker-kong/blob/master/compose/README.md
 ```bash
 cd api-service
 mvn package spring-boot:repackage
-docker build --build-arg JAR_FILE=target/*.jar -t cpqd/mock/react-api .
+docker build --build-arg JAR_FILE=target/*.jar -t cpqd/mock/app-api .
+```
+
+## Compilação e geração da imagem do FrontEnd
+
+```bash
+cd front-end
+docker build -t cpqd/mock/app-front .
 ```
 
 ## Docker compose
